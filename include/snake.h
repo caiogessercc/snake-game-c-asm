@@ -15,10 +15,6 @@
 
 #include "constants.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /**
  * Inicializa todo o estado do jogo.
  *
@@ -142,9 +138,5 @@ uint32_t game_get_snake_length(void);
  * @return ponteiro para início do array
  */
 const position_t* game_get_snake_body(void);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif
