@@ -22,7 +22,6 @@ collision_check:
     ; carrega o endereço da struct game_state_data em rsi
     lea rsi, [rel game_state_data]
 
-
     ; Offsets importantes da estrutura:
     ;
     ; snake_body começa no offset 0
@@ -46,7 +45,6 @@ collision_check:
 
     ; head.y (offset 2)
     movsx edx, word [rsi + 2]
-
 
     ; Colisão com paredes
     ;
@@ -78,7 +76,6 @@ collision_check:
     cmp edx, 24
     jge .game_over
 
-
     ; Colisão com o próprio corpo
     ;
     ; Percorre todos os segmentos da snake
@@ -100,7 +97,6 @@ collision_check:
     ; começa do 1 porque o índice 0 é a cabeça
     ; não faz sentido comparar com ela mesma
     mov r8d, 1
-
 
 .self_collision_loop:
 
@@ -126,7 +122,6 @@ collision_check:
     ; se x e y forem iguais -> colisão é detectada
     jmp .game_over
 
-
 .next:
 
     ; i++
@@ -138,7 +133,6 @@ collision_check:
     ; jl = jump if less
     ; continua enquanto i < length
     jl .self_collision_loop
-
 
 .no_collision:
     ret
