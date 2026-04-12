@@ -97,6 +97,8 @@ make
 make run
 ```
 
+ <img src="./img/snake-game-teste.gif" width="400">
+
 ---
 
 ## Possíveis melhorias futuras
