@@ -33,6 +33,3 @@ run: all
 
 clean:
 	rm -rf $(BUILD_DIR)
-
-run:
-	./build/snake
